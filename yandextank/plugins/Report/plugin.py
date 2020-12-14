@@ -64,7 +64,7 @@ class Plugin(AbstractPlugin, Thread):
         try:
             self.server = ReportServer(self)
             self.server.owner = self
-        except Exception, ex:
+        except Exception as ex:
             logger.warning("Failed to start web results server: %s", ex)
 
     def start_test(self):
